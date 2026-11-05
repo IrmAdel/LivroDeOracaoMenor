@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Importar PDF — gerar índice e seções</title>
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/png" href="favicon.png">
+<style>
+  :root { color-scheme: light dark; --b: #8a6d3b; }
+  body { font: 16px/1.5 system-ui, sans-serif; max-width: 52rem; margin: 0 auto; padding: 1.2rem; }
+  h1 { font-size: 1.4rem; margin: 0 0 .3rem; } h2 { font-size: 1.05rem; margin: 1.6rem 0 .4rem; }
+  fieldset { border: 1px solid #8884; border-radius: 8px; margin: .8rem 0; padding: .8rem 1rem; }
+  label { display: inline-flex; gap: .4rem; align-items: center; margin: .2rem 1rem .2rem 0; }
+  input[type=number] { width: 5.5rem; } textarea { width: 100%; min-height: 12rem; font: 14px/1.4 ui-monospace, monospace; box-sizing: border-box; }
+  button { font: inherit; padding: .4rem .9rem; border-radius: 6px; border: 1px solid #8886; cursor: pointer; }
+  button.primario { background: var(--b); color: #fff; border-color: var(--b); }
+  #status { margin: .8rem 0; font-weight: 600; } #status.erro { color: #c0392b; }
+  .rolagem { max-height: 16rem; overflow: auto; border: 1px solid #8884; border-radius: 6px; }
+  table { border-collapse: collapse; width: 100%; font-size: .85rem; } td, th { padding: .15rem .5rem; border-bottom: 1px solid #8883; text-align: left; }
+  .ajuda { font-size: .9rem; opacity: .8; } [hidden] { display: none !important; }
+</style>
+</head>
+<body>
+<p><a href="index.html">← Voltar ao livro</a></p>
+<h1>Importar PDF</h1>
+<p class="ajuda">Lê o PDF aqui no navegador (nada é enviado a servidor algum), separa em páginas, e gera a pasta <code>data/</code> com o índice e as seções. Você escolhe onde cada seção começa.</p>
+
+<fieldset>
+  <legend>1. Abrir o PDF</legend>
+  <input type="file" id="arquivo" accept="application/pdf">
+  <button type="button" id="usar-local">Usar shorter_PB.pdf desta pasta</button>
+</fieldset>
+
+<fieldset id="passo2" hidden>
+  <legend>2. Ler o texto</legend>
+  <label>Do PDF nº <input type="number" id="de" min="1" value="1"></label>
+  <label>até <input type="number" id="ate" min="1" value="1"></label>
+  <label><input type="checkbox" id="dupla" checked> Cada página do PDF é uma página dupla (separar em esquerda/direita)</label><br>
+  <label>Método
+    <select id="modo">
+      <option value="texto">Camada de texto do PDF (rápido)</option>
+      <option value="ocr">OCR no navegador (lento, melhor em escaneados)</option>
+    </select>
+  </label>
+  <label>Idioma do OCR <input id="idioma" value="eng" size="6"></label><br>
+  <button type="button" class="primario" id="extrair">Ler</button>
+  <button type="button" id="parar">Parar</button>
+  <p class="ajuda">Dica: teste primeiro com poucas páginas (ex.: 1 a 10). Se o texto da camada do PDF vier ruim, use OCR.</p>
+</fieldset>
+
+<p id="status" role="status"></p>
+
+<fieldset id="passo3" hidden>
+  <legend>3. Definir as seções</legend>
+  <label>Número impresso = nº da página lida − <input type="number" id="desloc" value="0"></label>
+  <p class="ajuda">Ajuste o deslocamento até a coluna “Nº impresso” bater com o número que aparece no pé das páginas do livro.</p>
+  <div class="rolagem"><table id="previa"><thead><tr><th>Nº lida</th><th>Nº impresso</th><th>Primeira linha</th><th>Linhas</th></tr></thead><tbody></tbody></table></div>
+  <h2>Seções</h2>
+  <p class="ajuda">Uma por linha: <code>nº da página lida; título</code>. Cada seção vai até a anterior à próxima.</p>
+  <textarea id="secoes" spellcheck="false" placeholder="1; Prefácio&#10;5; Oração da manhã"></textarea>
+  <p>
+    <label><input type="checkbox" id="cab" checked> Remover cabeçalho corrente (linha em maiúsculas no topo) e número de página</label>
+  </p>
+  <button type="button" id="detectar">Sugerir seções pelos cabeçalhos</button>
+  <button type="button" class="primario" id="gerar">Gerar data.zip</button>
+  <p id="resumo" class="ajuda"></p>
+</fieldset>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/tesseract.js@5.1.1/dist/tesseract.min.js"></script>
+<script src="js/importador.js"></script>
+</body>
+</html>

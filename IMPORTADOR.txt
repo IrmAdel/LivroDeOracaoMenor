@@ -1,0 +1,28 @@
+IMPORTADOR DE PDF  (importar.html + js/importador.js)
+
+O site em si (index.html, css, js/app.js) NÃO foi alterado.
+Foram acrescentados apenas: importar.html, js/importador.js e este arquivo.
+
+COMO USAR
+1. Abra o site por um servidor (não funciona por file://):
+     python3 -m http.server      (dentro da pasta do site)
+   e acesse  http://localhost:8000/importar.html
+   (também funciona no GitHub Pages: https://SEU-USUARIO.github.io/REPOSITORIO/importar.html)
+2. Passo 1: escolha o PDF no seletor, ou use o botão "Usar shorter_PB.pdf desta pasta".
+3. Passo 2: informe o intervalo de páginas (teste com 1 a 10 primeiro), deixe marcado
+   "página dupla" se cada página do PDF tem duas páginas do livro, e clique em "Ler".
+   - "Camada de texto": usa o texto que já está dentro do PDF (rápido, mas a qualidade
+     é a do OCR original).
+   - "OCR no navegador": refaz o OCR com Tesseract.js (lento; baixa ~15 MB na 1ª vez).
+4. Passo 3: ajuste o "deslocamento" até a coluna "Nº impresso" bater com o número no pé
+   das páginas; clique em "Sugerir seções pelos cabeçalhos" (ou escreva à mão, uma por
+   linha:  nº da página lida; título); confira e clique em "Gerar data.zip".
+5. Extraia o data.zip por cima da pasta do site (ele cria data/indice.json e
+   data/secoes/*.json) e publique no GitHub como de costume.
+
+LIMITES
+- Páginas com 2 ou 3 colunas podem sair com as colunas misturadas.
+- Itálico/negrito não são detectados; rubricas e títulos são adivinhados por regras
+  simples (maiúsculas, centralização, recuo). Corrija depois no modo de edição do site.
+- Os scripts de pdf.js, JSZip e Tesseract.js são carregados de cdnjs.cloudflare.com e
+  cdn.jsdelivr.net, então é preciso estar online.
