@@ -1,0 +1,27 @@
+{
+  "id":"39-collecfs",
+  "titulo":"Collecfs",
+  "modo":"prosa",
+  "paginaInicial":null,
+  "paginaFinal":null,
+  "blocos":[
+    {"tipo":"subtitulo","pagina":null,"texto":"SAINT PHll.lP AND SAINT JAMES’S DAY"},
+    {"tipo":"subsubtitulo","pagina":null,"texto":"May!."},
+    {"tipo":"subsubtitulo","pagina":null,"texto":"The Collect."},
+    {"tipo":"texto","pagina":null,"texto":"O ALMIGHTY God, whom truly to know is ever-"},
+    {"tipo":"texto","pagina":null,"texto":"lasting life: Grant us perfectly to know thy Son Jesus Christ to be the way, the truth, and the life; that, following the steps of thy holy Apostles, Saint Philip and Saint James, we may stedfastly walk in the way that leadeth to eternal life; through the samo thy Son Jesus Christ our Lord. Amen."},
+    {"tipo":"subsubtitulo","pagina":null,"texto":"V,e Epistle. The Gospel."},
+    {"tipo":"subtitulo","pagina":null,"texto":"SAINT BARNABAS THE APOSTLE"},
+    {"tipo":"subsubtitulo","pagina":null,"texto":"June 11."},
+    {"tipo":"subsubtitulo","pagina":null,"texto":"The Collect."},
+    {"tipo":"texto","pagina":null,"texto":"LORD God Almighty, who didst endue thy hot, Apostle Barnabas with singular gifts of tbo Ghost: Leave us not, we beseech thee, destituto thy manifold gifts, nor yet of grace to use them"},
+    {"tipo":"texto","pagina":null,"texto":"to thy honour and glory; through Jesus Christ Lord. Amen."},
+    {"tipo":"texto","pagina":null,"texto":"For the Epistle. The Gospel."},
+    {"tipo":"subtitulo","pagina":null,"texto":"SAINT JOHN BAPTIST’S DAY"},
+    {"tipo":"subsubtitulo","pagina":null,"texto":"June 24."},
+    {"tipo":"subsubtitulo","pagina":null,"texto":"The Collect."},
+    {"tipo":"texto","pagina":null,"texto":"ALMlGlITY God, by whose provideoce tby servant"},
+    {"tipo":"texto","pagina":null,"texto":"John Baptist was wonderfully born. and sent to"},
+    {"tipo":"verso","pagina":null,"texto":"ofthy Son our Saviour, by preachins"}
+  ]
+}

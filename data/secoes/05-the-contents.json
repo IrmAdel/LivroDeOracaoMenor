@@ -1,0 +1,15 @@
+{
+  "id":"05-the-contents",
+  "titulo":"The Contents",
+  "modo":"prosa",
+  "paginaInicial":null,
+  "paginaFinal":null,
+  "blocos":[
+    {"tipo":"texto","pagina":null,"texto":"The Christian Year Page iv Scripture Sentences 1 Morning Prayer S Evening Prayer IS The Litany 24 The Holy Communion 31 The Collects SI Prayers and Thanksgivings 91 Publick Baptism of Infants 99 The Catechism 108 Confirmation 115 The Marriage Service 121 Tbe Burial of the Dead 131 Tbe Burial of a Child 139 Tbe Psalms 144 Benedicite 313"},
+    {"tipo":"subtitulo","pagina":null,"texto":"NOTE"},
+    {"tipo":"texto","pagina":null,"texto":"The SerTIces ....n be aid or sung thoougloout t. • dIsIt.d and audible voice."},
+    {"tipo":"texto","pagina":null,"texto":"The People shaD also say or sing their ....... audibIJ ODd clearly."},
+    {"tipo":"texto","pagina":null,"texto":"Words or sentences enclosed. in brackeb [] are s0metimes omitted."},
+    {"tipo":"texto","pagina":null,"texto":"If Morning or Eyenfng Prayer is immediately followed by another service provided in tbis book, it may begiD at the versicle •0 Lor~ open thou our lips’. L"}
+  ]
+}

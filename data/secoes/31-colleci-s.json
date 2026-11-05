@@ -1,0 +1,15 @@
+{
+  "id":"31-colleci-s",
+  "titulo":"Colleci's",
+  "modo":"prosa",
+  "paginaInicial":null,
+  "paginaFinal":null,
+  "blocos":[
+    {"tipo":"subtitulo","pagina":null,"texto":"GOOD FRIDAY"},
+    {"tipo":"subsubtitulo","pagina":null,"texto":"The Collects."},
+    {"tipo":"texto","pagina":null,"texto":"ALMlORIY God, we beseech thee graciously to n behold this thy family. for which our Lord Jesus Christ was contented to be betrayed, and given up into the hands of wicked men, and to suffer death upo n the cross. who now liveth and reignelh with thee and the Holy Ghost, ever one God, world wilhout end. Amen."},
+    {"tipo":"texto","pagina":null,"texto":"ALMIOHTY and everlasting God, by whos. Spirit n the whole body of the Church is governed and sanctified : Receive our supplications and prayers, which we offer before thee for all estates of men in thy holy Church, that every member of the same, in his vocation and ministry, may truly and godly serve thee; through our Lord and Saviour Jesus ChrisL Amen."},
+    {"tipo":"texto","pagina":null,"texto":"MERCIl’UL God, who has! made all men, and O hatest nothing that thou hast made, nor wo uldest the dealh of a sinner, but rathe r that he should be converted and live: Have mercy upon thine ancient people the Jews, and upon all who have Dot known thee, or who deny the faith of Christ crucified ; take from them all ignorance, hardness of heart. and contempt o f thy Wo rd; and so fetch them home, blessed Lord, to thy fold, that they may be made one flock under one shepherd, Jesus Christ our Lord. who liveth and reigneth with thee and the Holy Spirit, one God, world without end. Amen."},
+    {"tipo":"subsubtitulo","pagina":null,"texto":"The Epistle. The Gospel."}
+  ]
+}
