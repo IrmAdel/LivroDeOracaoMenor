@@ -1,0 +1,32 @@
+LIVRO DE ORAÇÃO COMUM (IEAB 1987) - SITE PRONTO
+
+1. Extraia o .zip no computador.
+2. No GitHub, crie um repositório (New repository).
+3. Add file > Upload files. Arraste para a página estes itens, que estão
+   dentro da pasta extraída:  index.html, favicon.png, css, js, data   -> Commit changes.
+4. Settings > Pages > Source: "Deploy from a branch" > Branch: main, pasta "/ (root)" > Save.
+5. Espere 1 a 2 minutos. O endereço será https://SEU-USUARIO.github.io/NOME-DO-REPOSITORIO/
+
+PARA EDITAR (opcional):
+- GitHub > Settings > Developer settings > Personal access tokens > Fine-grained tokens.
+  Restrinja a ESTE repositório e dê "Contents: Read and write".
+- No site, clique em ⚙, preencha usuário, repositório, ramo (main) e pasta (data), cole o token.
+- Clique em "Editar", altere o texto e use "Publicar no GitHub".
+
+CRIAR NOVAS SEÇÕES (modo de edição):
+- Com o modo "✎ Editar" ligado, aparece o botão "＋ Nova seção" no topo do índice.
+- Informe o título e a posição (no começo, no final ou depois de uma seção existente).
+- Escreva o conteúdo (o título da seção nova também pode ser corrigido enquanto não for publicada).
+- "Publicar no GitHub" grava o arquivo da seção em data/secoes/ e atualiza data/indice.json.
+- Antes de publicar, a seção fica só como rascunho neste navegador; "Descartar rascunho" a apaga.
+
+TABELAS E ATALHOS (modo de edição):
+- No seletor de tipo de cada bloco há a opção "Tabela": abre uma janela para escolher número de linhas e colunas,
+  bordas visíveis ou não e cabeçalho. Bloco vazio é substituído pela tabela; bloco com texto ganha a tabela logo abaixo.
+- Sobre a tabela aparece uma barra com: ＋/− linha, ＋/− coluna, cabeçalho e bordas.
+- Atalhos para mudar o tipo do bloco em que está o cursor: Ctrl+Shift+1 título, 2 subtítulo, 3 rubrica, 4 texto,
+  5 verso, 6 tabela, 7 sub-subtítulo. As teclas ficam na constante ATALHOS, no começo do js/app.js.
+- O arquivo da seção guarda "bordas": true/false na tabela. Tabelas antigas (sem esse campo) mantêm o visual de antes.
+
+SUB-SUBTÍTULO:
+- Novo tipo de bloco "Sub-subtítulo" (grava "tipo":"subsubtitulo" no JSON). Aparece em versalete (small caps) na cor do texto, com um fio fino embaixo, mais sóbrio que o subtítulo (que é negrito colorido), para indicar que é uma subdivisão dele (ex.: A, B, C... dentro do Artigo I). Atalho: Ctrl+Shift+7.
